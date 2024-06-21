@@ -40,44 +40,42 @@ user_input = int(user_input)
 
 
 if user_input == 0:
-    print("User chose rock!")
+    print("You chose rock!")
     print(rock)
-    print(f"Computer chose {comp_choice}")
+    
     if comp_choice == 0:
             print (rock)
-            print("It's a tie")
+            print("I chose the same. It's a tie")
     elif comp_choice == 1:
             print(paper)
-            print("Computer wins")
+            print("I chose paper! I WIN")
     elif comp_choice == 2:
             print(scissors)
-            print("User wins")
+            print("I chose scissors, you win!")
 
 
 if user_input == 1:
-    print("User chose paper!")
+    print("You chose paper!")
     print(paper)
-    print(f"Computer chose {comp_choice}")
     if comp_choice == 0:
             print(rock)
-            print("User wins")
+            print("I chose rock, you win!")
     elif comp_choice == 1:
             print(paper)
-            print("It's a tie")
+            print("I chose paper, it's a tie")
     elif comp_choice == 2:
             print(scissors)
-            print("Computer wins")
+            print("I chose scissors, I win!")
 if user_input == 2:
-    print("User chose scissors!")
+    print("You chose scissors!")
     print(scissors)
-    print(f"computer chose {comp_choice}")
     if comp_choice == 0:
         print (rock)
-        print("Computer wins")
+        print("I chose rock, I win!")
     elif comp_choice == 1:
         print(paper)
-        print ("User wins")
+        print ("I chose paper, you win!")
     elif comp_choice == 2:
         print(scissors)
-        print("It's a tie")
+        print("I chose scissors, it's a tie")
 
