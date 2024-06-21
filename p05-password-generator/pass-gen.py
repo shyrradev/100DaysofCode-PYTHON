@@ -24,20 +24,20 @@ except ValueError:
 
 password_list = []
 
-for password_letter in range(1, nr_letters+1):
+for char in range(1, nr_letters+1):
     password_list.append(random.choice((letters)))
-for pass_symbol in range(1, nr_symbols + 1):
+for char in range(1, nr_symbols + 1):
     password_list.append(random.choice((symbols)))
-for pass_number in range(1, nr_numbers + 1):
+for char in range(1, nr_numbers + 1):
     password_list.append(random.choice(numbers))
+    
+random.shuffle(password_list)
 
-password_list= ''.join(password_list)
+password = ""
 
-print(f"The most secure password for your choice is: {password_list}")
+for char in password_list:
+    password = char + password
+    
 
-#Eazy Level - Order not randomised:
-#e.g. 4 letter, 2 symbol, 2 number = JduE&!91
+print(f"The most secure password for your choice is: {password}")
 
-
-#Hard Level - Order of characters randomised:
-#e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
