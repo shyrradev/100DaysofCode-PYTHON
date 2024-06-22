@@ -41,3 +41,10 @@ for char in password_list:
 
 print(f"The most secure password for your choice is: {password}")
 
+
+fruit_basket = []
+shopping_mall = ["Shyrra", "Lucky", "Hira", "Nidhi", "Jyoti"]
+
+for x in shopping_mall:
+    fruit_basket = fruit_basket + [x]
+    print(fruit_basket)
