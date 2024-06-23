@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
-
-
+import art_py
 import sys
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+logo = art_py.logo
+print(logo)
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
 def cipher(plain_text, shift_amount, direction):
     cipher_text = ""
     for letter in plain_text:
@@ -16,12 +19,16 @@ def cipher(plain_text, shift_amount, direction):
                 new_position = (position - shift_amount) % 26  # Wrap around using modulus
             new_letter = alphabet[new_position]
             cipher_text += new_letter
-     
+        else:
+            cipher_text += letter  # Preserve non-alphabet characters
+    return cipher_text  # Return the encrypted or decrypted text
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-if direction not in ["encode", "decode"]:
-    print("Please input valid choice: 'encode' or 'decode'")
-    sys.exit(1)
+while True:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    if direction in ["encode", "decode"]:
+        break  # Exit the loop if input is valid
+    else:
+        print("Please input valid choice: 'encode' or 'decode'")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
