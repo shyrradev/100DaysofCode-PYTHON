@@ -21,12 +21,17 @@ def multi(n1,n2):
     return n1 * n2
 def divide(n1,n2):
     return n1/n2    
-
+def power(n1,n2):
+    return n1**n2
+def modulus(n1,n2):
+    return n1%n2
 dict ={
     "*": multi,
     "+": add,
     "-": sub,
     "/":divide,
+    "**":power,
+    "%":modulus
 }
 def calculator():
     while True:
@@ -60,6 +65,7 @@ def calculator():
             num1 = answer
         elif var == "n":
             condition= False
+            break
         elif var == "new":
             clear()
             calculator()
