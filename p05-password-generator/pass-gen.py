@@ -20,8 +20,6 @@ except ValueError:
     nr_numbers = 0
     sys.exit(1)
 
-    
-
 password_list = []
 
 for char in range(1, nr_letters+1):
@@ -37,14 +35,6 @@ password = ""
 
 for char in password_list:
     password = char + password
-    
-
 print(f"The most secure password for your choice is: {password}")
 
 
-fruit_basket = []
-shopping_mall = ["Shyrra", "Lucky", "Hira", "Nidhi", "Jyoti"]
-
-for x in shopping_mall:
-    fruit_basket = fruit_basket + [x]
-    print(fruit_basket)
