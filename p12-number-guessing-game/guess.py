@@ -22,22 +22,27 @@ elif diff == "hard":
 
 else: 
     print("please choose one. 'easy' or 'hard'")
+        
 
 while attempts > 0:  # loop until attempts = 0
-    guess =int(input("Choose a number: "))
-    attempts -= 1
-    if comp == guess:
-        print(f"you guessed it right! You win! the number was {guess}")
-    elif comp > guess:
-        print("too low. Choose again")
-        print(f"you have {attempts} attempts left")
-    elif comp < guess:
-        print ("too high. Choose again")
-        print(f"you have {attempts} attempts left")
-    else:
-        print("Choose correct value")
-        break
+    try:
+        guess =int(input("Choose a number: "))
+        attempts -= 1
+        if comp == guess:
+            print(f"you guessed it right! You win! the number was {guess}")
+            break
+        elif comp > guess:
+            print("too low. Choose again")
+            print(f"you have {attempts} attempts left")
+        elif comp < guess:
+            print ("too high. Choose again")
+            print(f"you have {attempts} attempts left")
+        else:
+            print("Choose correct value")
+            break
+    except ValueError:
+        print("please choose a number")
 if attempts == 0: # if attempts = 0
-    print("You ran out of attempts you LOOSE!")
+    print(f"You ran out of attempts you LOOSE! the number was {comp}")
         
         
